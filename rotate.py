@@ -4,8 +4,6 @@ def rotate(array, angle_in_degrees):
     import math
     (h,w) = array.shape[:2]
     
-    result=np.zeros((new_height, new_width, array.shape[2])).astype(np.uint8)
-    
     angle = angle_in_degrees * math.pi / 180
     (cosine, sine) = np.cos(angle), np.sin(angle)
     rotation_matrix = [[cosine, sine], [-sine, cosine]]
@@ -21,6 +19,8 @@ def rotate(array, angle_in_degrees):
     # Find the centre of the new image
     new_centre_height = round(new_height/2)
     new_centre_width = round(new_width/2)
+
+    result=np.zeros((new_height, new_width, array.shape[2])).astype(np.uint8)
     
     for i, j in itertools.product(range(w), range(h)):
         # coordinates of pixel with respect to the centre of the original image
