@@ -24,6 +24,12 @@ def rotate(array, angle_in_degrees):
         # coordinates of pixel with respect to the centre of the original image
         y = original_centre_height - i                  
         x = original_centre_width - j
+
+        # coordinates of pixel of rotated image
+        new_x, new_y = np.matmul(rotation_matrix, [x,y])
+        new_y=int(new_centre_height-new_y)
+        new_x=int(new_centre_width-new_x)
+        
         if 0 <= new_x < w and 0 <= new_y < h:
             result[new_y, new_x, :] = pixels
             
