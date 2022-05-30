@@ -20,8 +20,10 @@ def rotate(array, angle_in_degrees):
     new_centre_height = round(new_height/2)
     new_centre_width = round(new_width/2)
     
-    for x,y in itertools.product(range(w), range(h)):
-        
+    for i, j in itertools.product(range(w), range(h)):
+        # coordinates of pixel with respect to the centre of the original image
+        y = original_centre_height - i                  
+        x = original_centre_width - j
         if 0 <= new_x < w and 0 <= new_y < h:
             result[new_y, new_x, :] = pixels
             
