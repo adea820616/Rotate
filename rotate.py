@@ -2,7 +2,7 @@ def rotate(array, angle_in_degrees):
     import itertools
     (h,w) = array.shape[:2]
     
-    result = np.zeros_like(array).astype(np.uint8)
+    result=np.zeros((new_height, new_width, array.shape[2])).astype(np.uint8)
     
     angle = angle_in_degrees * math.pi / 180
     (cosine, sine) = np.cos(angle), np.sin(angle)
