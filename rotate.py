@@ -1,5 +1,7 @@
 def rotate(array, angle_in_degrees):
     import itertools
+    import numpy as np
+    import math
     (h,w) = array.shape[:2]
     
     result=np.zeros((new_height, new_width, array.shape[2])).astype(np.uint8)
