@@ -29,8 +29,8 @@ def rotate(array, angle_in_degrees):
         new_x, new_y = np.matmul(rotation_matrix, [x,y])
         new_y=int(new_centre_height-new_y)
         new_x=int(new_centre_width-new_x)
-        
+
         if 0 <= new_x < w and 0 <= new_y < h:
-            result[new_y, new_x, :] = pixels
+            result[new_y, new_x, :] = array[i,j,:]
             
     return result
