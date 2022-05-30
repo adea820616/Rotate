@@ -7,6 +7,10 @@ def rotate(array, angle_in_degrees):
     angle = angle_in_degrees * math.pi / 180
     (cosine, sine) = np.cos(angle), np.sin(angle)
     rotation_matrix = [[cosine, sine], [-sine, cosine]]
+
+    # Define the height and width of the new image that will be formed
+    new_height = int(round(abs(h*cosine)+abs(w*sine)))
+    new_width = int(round(abs(w*cosine)+abs(h*sine)))
     
     for x,y in itertools.product(range(w), range(h)):
         pixels = array[y,x,:]
