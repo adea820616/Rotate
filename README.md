@@ -28,7 +28,16 @@ plt.imshow(rotated_image)
 <img src=https://i.imgur.com/618rY0C.png width="300" height="300">
 
 ## Problems
-There is a problem that needs to solve which is about rotated image with black points.
+There is a problem that needs to solve which is about rotated image with black points.</br>
+This is a problem called ''Aliasing''. Multiplying sines and cosines on the integer coordinates of the source image give integers causing some coordinates to be missed completely. The aliasing problem gets worse when angles are closer to the diagonals.</br>
+
+```python=
+# rotate.py
+# coordinates of pixel of rotated image
+new_x, new_y = np.matmul(rotation_matrix, [x,y])
+new_y=int(new_centre_height-new_y)
+new_x=int(new_centre_width-new_x)
+```
 
 ![](https://i.imgur.com/LpQZjk8.png)
 
