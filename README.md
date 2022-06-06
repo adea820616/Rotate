@@ -18,14 +18,14 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 plt.imshow(image)
 ```
 Example:</br>
-![](https://i.imgur.com/YfDENqB.png=300x300)
+<img src="https://i.imgur.com/YfDENqB.png" width="300" height="300">
 
 ```python
 # Start rotating
 rotated_image = rotate(array=image, angle_in_degrees=30)
 plt.imshow(rotated_image)
 ```
-![](https://i.imgur.com/618rY0C.png=300x300)
+<img src=https://i.imgur.com/618rY0C.png width="300" height="300">
 
 ## Problems
 There is a problem that needs to solve which is about rotated image with black points.
