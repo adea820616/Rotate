@@ -1,5 +1,5 @@
 # Rotate
-Tools about rotated image
+Tools about rotated image </br>
 Goals:
 - Solve the rotated image out of the boundary.
 - Use the center of image to rotate image and resize the new width and height of rotated image.
