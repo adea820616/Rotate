@@ -1,4 +1,4 @@
-# Rotate
+# Rotation
 Tools about rotated image </br>
 Goals:
 - Solve the rotated image out of the boundary.
